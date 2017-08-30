@@ -1,0 +1,55 @@
+/* ken burns effect */
+.carousel .carousel-item img {
+  -webkit-transition: all 5s;
+  -moz-transition: all 5s;
+  -o-transition: all 5s;
+  transition: all 5s;
+}
+.carousel .carousel-item.active.inactiveUntilOnLoad img,
+.carousel .carousel-item img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.carousel .carousel-item.active img {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.carousel.effects img.zoom-in{
+    -webkit-animation-name: effect-zoomin;
+  }
+  .carousel.effects img.zoom-out{
+    -webkit-animation-name: effect-zoomout;
+  }
+  .carousel.effects img.pan-right{
+    -webkit-animation-name: effect-panright;
+  }
+  .carousel.effects img.pan-left{
+    -webkit-animation-name: effect-panleft;
+  }
+
+@-webkit-keyframes effect-panright
+  {
+    0% {
+      -webkit-transform: scale(1.2);
+      margin-left:-10%;
+    }
+    33.33%{
+      -webkit-transform: scale(1.2);
+      margin-left:10%;
+    }
+    38%{
+      -webkit-transform: scale(1.2);
+      margin-left:10%;
+    }
+    100%{
+      -webkit-transform: scale(1.2);
+      margin-left:-10%;
+    }
+  }
