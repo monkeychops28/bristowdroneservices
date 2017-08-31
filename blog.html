@@ -20,6 +20,18 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.css" rel="stylesheet">
 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+  $('button').click(function(){;
+    $(this).text(function(i,old){
+        
+        return old=='Read More' ?  'Read Less' : 'Read More';
+    });
+});});
+</script>
+      
   </head>
 
   <body>
@@ -63,11 +75,21 @@
           <div class="card-img-overlay bg-overlay">
             <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services is born!</h2>
             <h4 class="text-shadow text-white">August 30, 2017</h4>
-            <p class="lead card-text text-shadow text-white w-50 d-none d-lg-block">Today marks the launch of the 
+            
+              
+             <div class="span1">
+        <button class="btn btn-secondary " data-toggle="collapse" data-target="#intro">Read More</button>
+    </div>   
+              
+           
+              
+  <div id="intro" class="collapse text-white">
+    <p >Today marks the launch of the 
               Bristow Drone Services website! Over the next few weeks and months the team will be 
               improving the site, the company branding, as well as working towards the official 
               Civil Aviation Authority Permission to Fly Commercial Operations (PfCO) certification!</p>
-                <a href="#" class="btn btn-secondary">Read More</a>
+                
+  </div>
           </div>
         </div>
       </div>
