@@ -22,19 +22,27 @@
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script>
+        
       $(document).ready(function(){
 
-  $('button').click(function(){;
-    if ((i == 'Read More') || (i == 'Read Less'))
-        {
-    $(this).text(function(i,old){
-        
-        if (i == 'Read More') {old='Read Less';}
-        if (i == 'Read Less') {old='Read More';}
-        return old;
-    }
-    });
-});});
+          
+          $("#readmore").click(function(){
+              
+                                      
+           
+            $(this).text(function(i,old){
+                
+ if ((old == 'Read More') || (old == 'Read Less'))
+                {
+                    
+                if (old == 'Read More') {snew='Read Less';}
+                if (old == 'Read Less') {snew='Read More';}
+                    alert(snew);
+                return snew;
+            }
+                         
+    })})});
+
 </script>
       
   </head>
@@ -72,22 +80,19 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="bg-faded p-4 my-4">
         <div class="card card-inverse">
          
           <div class="card-img-fluid bg-overlay">
             <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services is born!</h2>
-            <h4 class="text-shadow text-white">August 30, 2017</h4>
-            
-              
-             <div class="span1">
-        <button class="btn btn-secondary " data-toggle="collapse" data-target="#intro">Read More</button>
-    </div>   
-              
+            <h4 class="text-shadow text-white">30 August 2017</h4>
            
-              
+             <div class="span1">
+        <button id="readmore" class="btn btn-secondary " data-toggle="collapse" data-target="#intro">Read More</button>
+    </div>   
+          
   <div id="intro" class="collapse text-white">
     <p >Today marks the launch of the 
               Bristow Drone Services website! Over the next few weeks and months the team will be 
@@ -98,8 +103,6 @@
           </div>
         </div>
       </div>
-
-     
 
       <!-- Pagination -->
       <div class="bg-faded p-4 my-4">
