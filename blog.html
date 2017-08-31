@@ -25,9 +25,14 @@
       $(document).ready(function(){
 
   $('button').click(function(){;
+    if ((i == 'Read More') || (i == 'Read Less'))
+        {
     $(this).text(function(i,old){
         
-        return old=='Read More' ?  'Read Less' : 'Read More';
+        if (i == 'Read More') {old='Read Less';}
+        if (i == 'Read Less') {old='Read More';}
+        return old;
+    }
     });
 });});
 </script>
@@ -67,12 +72,12 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="bg-faded p-4 my-4">
         <div class="card card-inverse">
-          <img class="card-img img-fluid w-100" src="img/slide-1.jpg" alt="">
-          <div class="card-img-overlay bg-overlay">
+         
+          <div class="card-img-fluid bg-overlay">
             <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services is born!</h2>
             <h4 class="text-shadow text-white">August 30, 2017</h4>
             
