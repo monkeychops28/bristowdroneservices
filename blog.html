@@ -32,11 +32,11 @@
            
             $(this).text(function(i,old){
                 
- if ((old == 'Read More') || (old == 'Read Less'))
+ if ((old == 'more >>') || (old == '<< less'))
                 {
                     
-                if (old == 'Read More') {snew='Read Less';}
-                if (old == 'Read Less') {snew='Read More';}
+                if (old == 'more >>') {snew='<< less';}
+                if (old == '<< less') {snew='more >>';}
                     
                 return snew;
             }
@@ -83,23 +83,25 @@
     <div class="container">
 
       <div class="bg-faded p-4 my-4">
-        <div class="card card-inverse">
+        <div class="card  card-inverse">
          
-          <div class="card-img-fluid bg-overlay">
-            <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services is born!</h2>
-            <h4 class="text-shadow text-white">30 August 2017</h4>
+          <div class="card-img-fluid bg-overlay card-padded">
+              <h4 class="text-shadow text-white">30 August 2017</h4>
+            <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services is founded!</h2>
+            
            
-             <div class="span1">
-        <button id="readmore" class="btn btn-secondary " data-toggle="collapse" data-target="#intro">Read More</button>
-    </div>   
+             
+        
+       
           
   <div id="intro" class="collapse text-white">
-    <p >Today marks the launch of the 
+    <p >Exciting times as today marks the launch of the 
               Bristow Drone Services website! Over the next few weeks and months the team will be 
               improving the site, the company branding, as well as working towards the official 
               Civil Aviation Authority Permission to Fly Commercial Operations (PfCO) certification!</p>
                 
   </div>
+              <a href id="readmore" class="text-white" data-toggle="collapse" data-target="#intro">more >></a>
           </div>
         </div>
       </div>
