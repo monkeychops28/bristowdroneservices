@@ -22,24 +22,16 @@
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script>
-        
+       // if more clicked on then show less and vice versa        
       $(document).ready(function(){
-
-          
-          $("#readmore").click(function(){
-              
-                                      
-           
+          $('[id^=readmore]').click(function(){
             $(this).text(function(i,old){
-                
- if ((old == 'more >>') || (old == '<< less'))
-                {
-                    
-                if (old == 'more >>') {snew='<< less';}
-                if (old == '<< less') {snew='more >>';}
-                    
-                return snew;
-            }
+                if ((old == 'more >>') || (old == '<< less'))
+                {                    
+                    if (old == 'more >>') {snew='<< less';}
+                    if (old == '<< less') {snew='more >>';}
+                    return snew;
+                }
                          
     })})});
 
@@ -82,41 +74,41 @@
 
     <div class="container">
 
+<div class="bg-faded p-4 my-4">
+        <div class="card  card-inverse">
+         
+          <div class="card-img-fluid bg-overlay card-padded">
+              <h4 class="text-shadow text-white">4 September 2017</h4>
+            <h2 class="card-title text-shadow text-white text-uppercase mb-0">Contact Us page added to site</h2>     
+  <div id="intro1" class="collapse text-white">
+    <p > We have added a Contact page to the website where you will see our postal address, contact phone number, 
+        email address as well as a form where you can post a message directly. We will do our best to reply to
+        you as quickly as possible.
+      </p>              
+  </div>
+              <a href name="readmore1" id="readmore1" class="text-white" data-toggle="collapse" data-target="#intro1">more >></a>
+          </div>
+        </div>
+      </div>        
+        
       <div class="bg-faded p-4 my-4">
         <div class="card  card-inverse">
          
           <div class="card-img-fluid bg-overlay card-padded">
               <h4 class="text-shadow text-white">30 August 2017</h4>
-            <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services is founded!</h2>
-            
-           
-             
-        
-       
-          
+            <h2 class="card-title text-shadow text-white text-uppercase mb-0">Bristow Drone Services founded!</h2>     
   <div id="intro" class="collapse text-white">
     <p >Exciting times as today marks the launch of the 
               Bristow Drone Services website! Over the next few weeks and months the team will be 
               improving the site, the company branding, as well as working towards the official 
-              Civil Aviation Authority Permission to Fly Commercial Operations (PfCO) certification!</p>
-                
+              Civil Aviation Authority Permission to Fly Commercial Operations (PfCO) certification!</p>              
   </div>
-              <a href id="readmore" class="text-white" data-toggle="collapse" data-target="#intro">more >></a>
+              <a href name="readmore2" id="readmore2" class="text-white" data-toggle="collapse" data-target="#intro">more >></a>
           </div>
         </div>
       </div>
 
-      <!-- Pagination -->
-      <div class="bg-faded p-4 my-4">
-        <ul class="pagination justify-content-center mb-0">
-          <li class="page-item disabled">
-            <a class="page-link" href="#">&larr; Older</a>
-          </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
-          </li>
-        </ul>
-      </div>
+      
 
     </div>
     <!-- /.container -->
