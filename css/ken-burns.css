@@ -13,43 +13,71 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.carousel .carousel-item.active img {
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
+
+/* pan across image back and forward */
+.carousel .carousel-item img.pan {
+  -webkit-transform: scale(1.4, 1.4);
+  -moz-transform: scale(1.4, 1.4);
+  -o-transform: scale(1.4, 1.4);
+  -ms-transform: scale(1.4, 1.4);
+  transform: scale(1.4, 1.4);
 }
 
-.carousel.effects img.zoom-in{
-    -webkit-animation-name: effect-zoomin;
-  }
-  .carousel.effects img.zoom-out{
-    -webkit-animation-name: effect-zoomout;
-  }
-  .carousel.effects img.pan-right{
-    -webkit-animation-name: effect-panright;
-  }
-  .carousel.effects img.pan-left{
-    -webkit-animation-name: effect-panleft;
-  }
+.carousel .carousel-item.active.pan img {
+  
+  -webkit-animation: 10s slideImg;
+  -webkit-transform: scale(1.4, 1.4);
+  -moz-transform: scale(1.4, 1.4);
+  -moz-transform: 10s slideImg;  
+  -o-transform: scale(1.4, 1.4);
+  -o-transform: 10s slideImg;
+  animation: scale(1.4, 1.4);
+  animation: 10s slideImg;  
+  
+}
 
-@-webkit-keyframes effect-panright
-  {
-    0% {
-      -webkit-transform: scale(1.2);
-      margin-left:-10%;
+@-webkit-keyframes slideImg {
+        0% { transform: translateX(0%) scale(1.4, 1.4) ; }       
+        50% { transform: translateX(-10%) scale(1.4, 1.4); }
+       100% { transform: translateX(0%) scale(1.4, 1.4); }
     }
-    33.33%{
-      -webkit-transform: scale(1.2);
-      margin-left:10%;
+  @keyframes slideImg {
+        0% { transform: translateX(0%) scale(1.4, 1.4); }     
+        50% { transform: translateX(-10%) scale(1.4, 1.4); }      
+       100%  { transform: translateX(0%) scale(1.4, 1.4); }
     }
-    38%{
-      -webkit-transform: scale(1.2);
-      margin-left:10%;
+
+
+/* zoom into image */
+.carousel .carousel-item.active img {
+  -webkit-transform: scale(1.4,1.4);
+  -moz-transform: scale(1.4,1.4);
+  -o-transform: scale(1.4,1.4);
+  -ms-transform: scale(1.4,1.4);
+  transform: scale(1.4,1.4);
+}
+  
+/* zoom in and pan down slightly */
+.carousel .carousel-item.active.zoomdown img {
+  
+  -webkit-animation: 10s zoomImgDown;
+  -webkit-transform: translateY(-20%) scale(1.4, 1.4);
+  -moz-transform: 10s zoomImgDown;  
+  -moz-transform: translateY(-20%) scale(1.4, 1.4);
+  -o-transform: 10s zoomImgDown;
+  -o-transform: translateY(-20%) scale(1.4, 1.4);
+  animation: 20s zoomImgDown infinite; 
+  
+}
+
+  @-webkit-keyframes zoomImgDown {
+        0% { transform: translateY(0%) scale(1.0, 1.0) ; }      
+       100% { transform: translateY(-20%) scale(1.4, 1.4); }
     }
-    100%{
-      -webkit-transform: scale(1.2);
-      margin-left:-10%;
+  @keyframes zoomImgDown {
+        0% { transform: translateY(0%) scale(1.0, 1.0); }         
+       50%  { transform: translateY(-20%) scale(1.4, 1.4); }
+      100%  { transform: translateY(0.0001%) scale(1.0, 1.0); }
+       }  
     }
-  }
+
