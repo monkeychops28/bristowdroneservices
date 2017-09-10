@@ -6,8 +6,9 @@
   transition: all 5s;
 }
 .carousel .carousel-item.active.inactiveUntilOnLoad img,
+/* starting scale for the default images with no animation effect, i.e. 1.0 zoomed in */
 .carousel .carousel-item img {
-  -webkit-transform: scale(1);
+  -webkit-transform: scale(1.);
   -moz-transform: scale(1);
   -o-transform: scale(1);
   -ms-transform: scale(1);
@@ -15,6 +16,8 @@
 }
 
 /* pan across image back and forward */
+/* this defines the starting scale for the panned images i.e. 1.4x zoomed in */
+/* reused style for zoom-out images too, to start them zoomed in */
 .carousel .carousel-item img.pan {
   -webkit-transform: scale(1.4, 1.4);
   -moz-transform: scale(1.4, 1.4);
@@ -49,6 +52,7 @@
 
 
 /* zoom into image */
+/* this defines the starting scale for the default images i.e. 1.4x zoomed in */
 .carousel .carousel-item.active img {
   -webkit-transform: scale(1.4,1.4);
   -moz-transform: scale(1.4,1.4);
@@ -79,5 +83,31 @@
        50%  { transform: translateY(-20%) scale(1.4, 1.4); }
       100%  { transform: translateY(0.0001%) scale(1.0, 1.0); }
        }  
+    
+
+
+/* zoom out */
+.carousel .carousel-item.active.zoom-out img {
+    -webkit-transform:  scale(1.4, 1.4);
+  -webkit-animation: 10s zoomOut;
+  -moz-transform:  scale(1.4, 1.4);
+  -moz-transform: 10s zoomOut;  
+  -o-transform:  scale(1.4, 1.4);
+  -o-transform: 10s zoomOut;
+animation: scale(1,4,1.4);
+  animation: 20s zoomOut infinite; 
+  
+}
+
+  @-webkit-keyframes zoomOut {
+        0% { transform:  scale(1.4, 1.4) ; }      
+       100% { transform:  scale(1.0, 1.0); }
     }
+  @keyframes zoomOut {
+        0% { transform:  scale(1.4, 1.4); }         
+       50%  { transform:  scale(1.0, 1.0); }
+      100%  { transform:  scale(1.4, 1.4); }
+       }  
+    
+
 
