@@ -1,9 +1,9 @@
 /* ken burns effect */
 .carousel .carousel-item img {
-  -webkit-transition: all 6s;
-  -moz-transition: all 6s;
-  -o-transition: all 6s;
-  transition: all 6s;
+  -webkit-transition: all 7s;
+  -moz-transition: all 7s;
+  -o-transition: all 7s;
+  transition: all 7s;
 }
 .carousel .carousel-item.active.inactiveUntilOnLoad img,
 /* starting scale for the default images with no animation effect, i.e. 1.0 zoomed in */
