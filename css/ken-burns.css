@@ -1,9 +1,9 @@
 /* ken burns effect */
 .carousel .carousel-item img {
-  -webkit-transition: all 7s;
-  -moz-transition: all 7s;
-  -o-transition: all 7s;
-  transition: all 7s;
+  -webkit-transition: all 6s;
+  -moz-transition: all 6s;
+  -o-transition: all 6s;
+  transition: all 6s;
 }
 .carousel .carousel-item.active.inactiveUntilOnLoad img,
 /* starting scale for the default images with no animation effect, i.e. 1.0 zoomed in */
@@ -28,14 +28,14 @@
 
 .carousel .carousel-item.active.pan img {
   
-  -webkit-animation: 12s slideImg;
+  -webkit-animation: 13s slideImg;
   -webkit-transform: scale(1.4, 1.4);
   -moz-transform: scale(1.4, 1.4);
-  -moz-transform: 12s slideImg;  
+  -moz-transform: 13s slideImg;  
   -o-transform: scale(1.4, 1.4);
-  -o-transform: 12s slideImg;
+  -o-transform: 13s slideImg;
   animation: scale(1.4, 1.4);
-  animation: 12s slideImg;  
+  animation: 13s slideImg;  
   
 }
 
